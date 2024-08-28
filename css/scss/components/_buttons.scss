@@ -1,0 +1,17 @@
+.green-button {
+  background-color: $dark-green-color;
+  color: $white-color;
+  border-radius: $rounded-5;
+  width: 130px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-button {
+  background-color: $black-color;
+  color: $white-color;
+  border-radius: $rounded-5;
+  padding: 8px 10px;
+}

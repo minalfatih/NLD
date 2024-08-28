@@ -1,0 +1,51 @@
+// media query mixin
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// transtion effect
+@mixin transition {
+  transition: 0.3s ease-in-out;
+}
+
+// animation mixin
+@mixin keyF($anim-name) {
+  @keyframes #{$anim-name} {
+    @content;
+  }
+}
+
+// linear gradient
+@mixin gradient($num, $color1, $color2, $color3) {
+  background-image: linear-gradient(to right, $color1 $num, $color2, $color3);
+}
+
+@mixin gradientBottom($num, $color1, $color2, $color3) {
+  background-image: linear-gradient(to bottom, $color1 $num, $color2, $color3);
+}
+
+// clip text
+@mixin clip {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

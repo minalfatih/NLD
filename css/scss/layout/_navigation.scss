@@ -1,0 +1,51 @@
+/* Start Nav */
+nav {
+  button {
+    svg {
+      color: $white-color;
+    }
+  }
+  .navbar-nav {
+    border-radius: 0 0 $rounded-5 $rounded-5;
+    .nav-item {
+      &.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav-link {
+        color: $white-color;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 10px 0;
+        position: relative;
+        .active::after,
+        &:not(.nav-link.green-button)::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          @include gradient(
+            30%,
+            $green-color,
+            $dark-blue-color,
+            $dark-blue-color
+          );
+          width: 0%;
+          height: 3px;
+          border-radius: $rounded-5;
+          transition: $transition;
+        }
+        &:not(.nav-link.green-button).active::after {
+          width: 100%;
+          left: 0;
+        }
+        &:not(.nav-link.green-button):hover::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+/* End Nav */

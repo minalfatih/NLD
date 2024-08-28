@@ -1,0 +1,15 @@
+/* Start Header*/
+header {
+  background-color: $black-color;
+  position: relative;
+  z-index: 100;
+  border-radius: 0 0 $rounded-15 $rounded-15;
+  .navbar-brand {
+    img {
+      width: 195px;
+      position: relative;
+      right: 20px;
+    }
+  }
+}
+/* End Header*/

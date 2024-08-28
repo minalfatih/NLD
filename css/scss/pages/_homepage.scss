@@ -1,0 +1,493 @@
+/* Start Landing */
+.landing-section {
+  .container {
+    .landing-info {
+      h1 {
+        color: $black-color;
+        text-transform: uppercase;
+        font-size: 2rem;
+        @include lg {
+          @media (min-width: #{$screen-lg-min}) {
+            font-size: 3rem;
+          }
+        }
+        @include md {
+          @media (min-width: #{$screen-md-min}) {
+            font-size: 2.5rem;
+          }
+        }
+        span {
+          font-weight: bold;
+          @include gradient(30%, $green-color, $dark-blue-color, $green-color);
+          @include clip;
+        }
+      }
+      p {
+        color: $gray-color;
+        font-size: $fontSize;
+        width: 100%;
+        @include md {
+          @media (min-width: #{$screen-lg-min}) {
+            width: 80%;
+          }
+        }
+      }
+    }
+    .images {
+      position: relative;
+      text-align: right;
+      img {
+        border-radius: $rounded-15;
+      }
+      img,
+      div {
+        box-shadow: 0 0 20px 5px #97979747;
+      }
+      img:first-child {
+        position: relative;
+        right: 0;
+        width: 280px;
+        height: 400px;
+        @include md {
+          @media (min-width: #{$screen-sm-min}) {
+            width: 325px;
+            height: 450px;
+            right: 40px;
+          }
+        }
+      }
+      .img2 {
+        top: 4%;
+        left: -1%;
+        width: 44%;
+        height: 50%;
+        border-radius: 15px;
+        position: absolute;
+
+        background-image: url(/images/img2.png);
+        background-repeat: no-repeat;
+
+        background-size: cover;
+        @include md {
+          @media (min-width: #{$screen-sm-min}) {
+            top: 3%;
+            left: 10%;
+            width: 35%;
+            height: 48%;
+          }
+        }
+      }
+      .img3 {
+        width: 300px;
+        height: 250px;
+        border-radius: 15px;
+        position: absolute;
+        bottom: -20%;
+        left: -1%;
+        background-image: url(/images/img3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0px -120px;
+        @include md {
+          @media (min-width: #{$screen-sm-min}) {
+            bottom: -10%;
+            left: 10%;
+          }
+        }
+      }
+    }
+  }
+}
+/* End Landing */
+
+/* Start Projects */
+.projects {
+  position: relative;
+  > img {
+    position: absolute;
+    top: 380px;
+    left: 0;
+    width: 80%;
+    @include sm {
+      @media (min-width: #{$screen-sm-min}) {
+        width: 450px;
+        top: 330px;
+        left: 0;
+      }
+    }
+    @include md {
+      @media (min-width: #{$screen-md-min}) {
+        width: 50%;
+        top: -75px;
+      }
+    }
+    @include lg {
+      @media (min-width: #{$screen-lg-min}) {
+        width: 35%;
+        top: -85px;
+      }
+    }
+  }
+  .container {
+    .project-boxs {
+      margin-top: 150px;
+      @include md {
+        @media (min-width: #{$screen-sm-min}) {
+          margin-top: 0;
+        }
+      }
+      .box {
+        > div {
+          background-color: $black-color;
+          color: $white-color;
+          width: 150px;
+          height: 150px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          @include md {
+            @media (min-width: #{$screen-sm-min}) {
+              width: 200px;
+              height: 200px;
+            }
+          }
+          h1 {
+            color: $white-color;
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin: 0;
+            @include lg {
+              @media (min-width: #{$screen-lg-min}) {
+                font-size: 3.5rem;
+              }
+            }
+          }
+          p {
+            color: $white-color;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: bold;
+            @include lg {
+              @media (min-width: #{$screen-lg-min}) {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+        &.active {
+          > div {
+            background-color: $white-color;
+            color: $black-color;
+            border: 1px solid $gray-color;
+            h1 {
+              color: $black-color;
+            }
+            p {
+              color: $black-color;
+            }
+          }
+        }
+        &:nth-child(2) {
+          margin-top: 2rem;
+        }
+        &:nth-child(3) {
+          position: relative;
+          bottom: 30px;
+        }
+      }
+    }
+    .info {
+      h1 {
+        color: $dark-gray-color;
+        font-size: 1.7rem;
+        width: 100%;
+        text-transform: uppercase;
+        position: relative;
+        padding-left: 15px;
+        @include md {
+          @media (min-width: #{$screen-md-min}) {
+            font-size: 2rem;
+          }
+        }
+        @include lg {
+          @media (min-width: #{$screen-lg-min}) {
+            width: 60%;
+          }
+        }
+        @include xl {
+          @media (min-width: #{$screen-xl-min}) {
+            font-size: 2.7rem;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          border-radius: $rounded-6;
+          @include gradientBottom(
+            30%,
+            $green-color,
+            $dark-blue-color,
+            $dark-blue-color
+          );
+        }
+        span {
+          font-weight: bold;
+          @include gradient(
+            30%,
+            $green-color,
+            $dark-blue-color,
+            $dark-blue-color
+          );
+          @include clip;
+        }
+      }
+      p {
+        color: $gray-color;
+        font-size: $fontSize;
+        @include lg {
+          @media (min-width: #{$screen-lg-min}) {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}
+/* End Projects */
+
+/* Start who-we-are-section*/
+.who-we-are-section {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 28%;
+    width: 190%;
+    height: 35%;
+    transform: translate(-50%, -50%);
+    background-color: $black-color;
+    border-radius: 0 15px 15px 0;
+    z-index: -1;
+    @include sm {
+      @media (min-width: #{$screen-sm-min}) {
+        top: 33%;
+        width: 135%;
+        height: 45%;
+      }
+    }
+    @include md {
+      @media (min-width: #{$screen-md-min}) {
+        top: 37%;
+        width: 140%;
+        height: 54%;
+      }
+    }
+    @include lg {
+      @media (min-width: #{$screen-lg-min}) {
+        top: 50%;
+        width: 102%;
+        height: 73%;
+      }
+    }
+  }
+  .container {
+    .image {
+      img {
+        max-width: 100%;
+        @include sm {
+          @media (min-width: #{$screen-sm-min}) {
+            max-width: 70%;
+          }
+        }
+        @include md {
+          @media (min-width: #{$screen-md-min}) {
+            max-width: 73%;
+          }
+        }
+        @include lg {
+          @media (min-width: #{$screen-lg-min}) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .info {
+      h1 {
+        color: $dark-gray-color;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        span {
+          font-weight: bold;
+          @include gradient(
+            30%,
+            $green-color,
+            $dark-blue-color,
+            $dark-blue-color
+          );
+          @include clip;
+        }
+      }
+      p {
+        color: $gray-color;
+        font-size: $fontSize;
+      }
+    }
+  }
+}
+/* End who-we-are-section*/
+
+/* Start Our Expertise */
+.our-expertise {
+  background-color: $black-color;
+  .container {
+    .info {
+      h1 {
+        color: $white-color;
+        text-transform: uppercase;
+        span {
+          font-weight: bold;
+          @include gradient(
+            30%,
+            $green-color,
+            $dark-blue-color,
+            $dark-blue-color
+          );
+          @include clip;
+        }
+      }
+      p {
+        color: $light-gray-color;
+        font-size: $fontSize;
+        width: 100%;
+        @include lg {
+          @media (min-width: #{$screen-lg-min}) {
+            width: 45%;
+          }
+        }
+      }
+    }
+    .services-boxs {
+      background-image: url(/images/robot-plane.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      @include md {
+        @media (min-width: #{$screen-md-min}) {
+          background-size: auto;
+        }
+      }
+      .row {
+        height: 70vh;
+        @include lg {
+          @media (min-width: #{$screen-lg-min}) {
+            height: 450px;
+          }
+        }
+      }
+      .box {
+        img {
+          width: 70px;
+        }
+        h2 {
+          color: $white-color;
+          font-size: 1.6rem;
+        }
+        p {
+          color: $light-gray-color;
+        }
+      }
+    }
+  }
+}
+/* End Our Expertise */
+
+/* Start Contact */
+.contact {
+  .container {
+    .image {
+      img {
+        border-radius: $rounded-15;
+        box-shadow: 0px 0px 15px 5px #0000003d;
+        max-width: 100%;
+        @include md {
+          @media (min-width: #{$screen-md-min}) {
+            max-width: 60%;
+          }
+        }
+        @include lg {
+          @media (min-width: #{$screen-lg-min}) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .info {
+      h1 {
+        color: $black-color;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        @include md {
+          @media (min-width: #{$screen-md-min}) {
+            font-size: 2rem;
+          }
+        }
+        span {
+          font-weight: bold;
+          @include gradient(
+            30%,
+            $green-color,
+            $dark-blue-color,
+            $dark-blue-color
+          );
+          @include clip;
+        }
+      }
+      p {
+        color: $gray-color;
+        font-size: $fontSize;
+        margin: 0;
+        width: 70%;
+      }
+      form {
+        box-shadow: 0px 6px 6px 2px #0000003d;
+        border-radius: $rounded-6;
+        label {
+          background-color: $white-color;
+          color: $gray-color;
+          text-transform: uppercase;
+          width: fit-content;
+          padding: 0 18px 0 10px;
+          position: relative;
+          top: 12px;
+          left: 5%;
+        }
+        input[type="text"],
+        textarea {
+          border: 1px solid $gray-color;
+          padding: 10px;
+          border-radius: $rounded-6;
+          outline: none;
+          color: $black-color;
+          caret-color: $blue-color;
+        }
+        textarea {
+          resize: none;
+          height: 150px;
+        }
+        input[type="submit"] {
+          padding: 10px 30px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+/* End Contact */
